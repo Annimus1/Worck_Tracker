@@ -1,0 +1,104 @@
+:root{
+	--front-color: rgba(31, 211, 240,.6);
+	--hover-color: rgba(31, 211, 240,1);
+}
+
+.container{
+	display: flex;
+	justify-content: space-around;
+}
+.card{
+	text-align: center;
+	margin-top: 2em;
+	min-width: 30em;
+}
+
+/** INPUT-GROUP **/
+.input-group{
+	width: 80%;
+	align-items: center;
+	left:10%;
+	margin-bottom: 1em;
+}
+
+.input-group input{
+	height: 2.3em;
+}
+
+/** BOTONES **/
+.btn-info{
+	border:none;
+	background-color: var(--front-color);
+}
+
+.btn-info:hover{
+	border:none;
+	background-color: var(--hover-color);
+}
+
+
+/** CARD-FOOTER**/
+.card-footer{
+	display: flex;
+	justify-content: space-around;
+}
+.card-footer button{
+	width: 25%;
+	font-size: 20px;
+}
+
+
+/**CAMPAING-CONTAINER**/
+
+.form-campaign{
+	position: relative;
+	height: 3em;
+}
+.campaign-container{
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.campaign-container #campaign-input{
+	border: 0;
+	height: 100%;
+	width: 100%;
+	border-bottom: 1px solid var(--front-color);
+}
+
+.campaign-container #label{
+	font-size: 30px;
+	font-weight: 500;
+	position: absolute;
+	top: .2em;
+	left: 4em;
+	transition: .3s;
+
+}
+
+.campaign-container #campaign-input:focus{
+	border: none;
+	border-bottom: 2px solid var(--hover-color);
+	outline: none;
+	font-weight: 500;
+}
+
+.campaign-container #campaign-input:focus + #label{
+	position: absolute;
+	font-size: 15px;
+	top: -20%;
+	left: 5%;
+	color: var(--hover-color);
+	transition: .3;
+}
+
+.focused {
+	position: absolute;
+	font-size: 15px;
+	top: -20%;
+	left: 5%;
+	color: var(--hover-color);
+	transition: .3;
+}
