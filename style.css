@@ -11,6 +11,7 @@
 	text-align: center;
 	margin-top: 2em;
 	min-width: 30em;
+	box-shadow: 0 10px 10px #1512
 }
 
 /** INPUT-GROUP **/
@@ -18,7 +19,7 @@
 	width: 80%;
 	align-items: center;
 	left:10%;
-	margin-bottom: 1em;
+	margin-bottom: 0.8em;
 }
 
 .input-group input{
@@ -102,3 +103,14 @@
 	color: var(--hover-color);
 	transition: .3;
 }
+
+
+/** SECOND SECTION**/
+
+.secons-section{
+	margin-top: 20%;
+}
+#card-body{
+	border:0;
+}
+
