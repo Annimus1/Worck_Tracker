@@ -68,13 +68,17 @@
 	width: 100%;
 	border-bottom: 1px solid var(--front-color);
 }
-
-.campaign-container #label{
+#label{
+	max-height: 2em;
+	overflow: hidden;
+}
+.campaign-container #label {
 	font-size: 30px;
 	font-weight: 500;
 	position: absolute;
 	top: .2em;
-	left: 4em;
+	left: 0em;
+	color: var(--hover-color);
 	transition: .3s;
 
 }
@@ -95,14 +99,6 @@
 	transition: .3;
 }
 
-.focused {
-	position: absolute;
-	font-size: 15px;
-	top: -20%;
-	left: 5%;
-	color: var(--hover-color);
-	transition: .3;
-}
 
 
 /** SECOND SECTION**/

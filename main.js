@@ -6,10 +6,18 @@ let campaign =document.getElementById('campaign-input');
 
 
 campaign.addEventListener("focusout",()=>{
-	if(campaign.value != ""){
+	if(campaign.value != "" && campaign.value.length <=15){
 		label.textContent=campaign.value;
 		campaign.value="";
-	} else {label.textContent="Campaign";}
+	} else if (campaign.value.length >=15){
+		console.log(campaign.value.length);
+		label.textContent="Campaign";
+		campaign.value=""
+		alert("Campaign name should be shorter than 15 characters :-(")
+	}else{
+		label.textContent="Campaign";
+		campaign.value=""
+	}
 })
 
 
@@ -147,6 +155,8 @@ document.getElementById('vm-').addEventListener('click',e=>{
 
 function logFunction() {
 
+	let amountOfCalls = 0;
+
 	let content = ""
 	const items=[
 		[lead,"Lead"],
@@ -159,9 +169,14 @@ function logFunction() {
 
 	items.forEach(cal =>{
 		if(cal[0] != 0){
-			content += `<b>${cal[1]} ${cal[0]}<b><br>`
+			content += `<b>${cal[1]} ${cal[0]}<b><br>`;
+			amountOfCalls+= cal[0];
 		}
 	})
+
+	if(amountOfCalls!=0){
+		content += `<br><br>Amount of calls: <b>${amountOfCalls}<b>`;
+	}
 
 	return content;
 }
@@ -173,6 +188,7 @@ let log = document.getElementById('log');
 let reload = document.getElementById('reload');
 
 log.addEventListener("click",()=>{
+	document.getElementById('subtitle').textContent = label.innerHTML;
 	document.getElementById('second-section').style = "display: block;"
 	document.getElementById('card-body').innerHTML = logFunction()
 });
